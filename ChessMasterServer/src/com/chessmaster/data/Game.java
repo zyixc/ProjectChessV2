@@ -8,7 +8,7 @@ public class Game {
     private String event;
     private String site;
     private String date;
-    private int round;
+    private String round;
     private String white;
     private String black;
     private String result;
@@ -24,7 +24,7 @@ public class Game {
 
     public Game(){}
 
-    public Game(String gameid, String event, String site, String date, int round, String white, String black,
+    public Game(String gameid, String event, String site, String date, String round, String white, String black,
                 String result, int white_elo, int black_elo, String eco, String moves, String[] w, String[] b) {
         this.gameid = gameid;
         this.event = event;
@@ -74,11 +74,11 @@ public class Game {
         this.date = date;
     }
 
-    public int getRound() {
+    public String getRound() {
         return round;
     }
 
-    public void setRound(int round) {
+    public void setRound(String round) {
         this.round = round;
     }
 

@@ -41,11 +41,12 @@ public class GameProfileScreen extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_game_profile_screen, container, false);
         final TextView white = (TextView) view.findViewById(R.id.fGPS_White_Put_TextView);
+        final TextView white_rating = (TextView) view.findViewById(R.id.fGPS_White_Rating_TextView);
         final TextView black = (TextView) view.findViewById(R.id.fGPS_Black_Put_TextView);
+        final TextView black_rating = (TextView) view.findViewById(R.id.fGPS_Black_Rating_TextView);
         final TextView result = (TextView) view.findViewById(R.id.fGPS_Result_Put_TextView);
         final Button compare = (Button) view.findViewById(R.id.fGPS_Compare_Button);
         WebView webview = (WebView) view.findViewById(R.id.fGPS_WebView);
@@ -59,7 +60,9 @@ public class GameProfileScreen extends Fragment {
         });
 
         white.setText(game.getWhite());
+        white_rating.setText(Integer.toString(game.getWhite_elo()));
         black.setText(game.getBlack());
+        black_rating.setText(Integer.toString(game.getBlack_elo()));
         result.setText(game.getResult());
 
         return view;

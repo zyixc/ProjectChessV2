@@ -108,7 +108,6 @@
             android:layout_weight="1"
             android:background="@drawable/customborder"
             android:enabled="false"
-            android:text="w1"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#008080" />
 
@@ -120,7 +119,6 @@
             android:layout_weight="1"
             android:background="@drawable/customborder"
             android:enabled="false"
-            android:text="w2"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#008080" />
 
@@ -132,7 +130,6 @@
             android:layout_weight="1"
             android:background="@drawable/customborder"
             android:enabled="false"
-            android:text="w3"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#008080" />
 

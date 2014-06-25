@@ -4,8 +4,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.IOException;
 /**
- * Created by Jakob Jenkov
- * Edited by zyixc
+ * @author Jakob Jenkov
+ * @author zyixc
  **/
 public class Server implements Runnable{
 
@@ -60,7 +60,13 @@ public class Server implements Runnable{
             throw new RuntimeException("Cannot open port 8080", e);
         }
     }
-
+    
+    /**
+     * Starts the server
+     * Takes port number as an argument, pref 8080
+     * @param args
+     * @return void
+     */
     public static void main(String[] args) {
         Server server = new Server(args[0]);
         System.out.println("Java Server Started! on 127.0.0.1:"+args[0]);

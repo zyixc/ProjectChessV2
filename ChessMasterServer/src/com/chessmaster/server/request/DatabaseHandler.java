@@ -32,10 +32,7 @@ public class DatabaseHandler {
             if(spn_rs.next()){            	
             	result = new Player(spn_rs.getString(1),spn_rs.getString(2), spn_rs.getString(3));
             }
-            result = getGamesFromPlayer(result);
-            result.calculateNeededData();
-            if(Integer.parseInt(result.getNumberofgames())>1&&!result.getFirstname().equals("0"))
-            	return result;
+            return result;
         }catch(Exception e){
             e.printStackTrace();
         }
@@ -67,14 +64,16 @@ public class DatabaseHandler {
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
-                games.add(new Game(
+            	Player player_white = getPlayer(rs.getString(6));
+            	Player player_black = getPlayer(rs.getString(7));
+            	games.add(new Game(
                         rs.getString(1),
                         rs.getString(2),
                         rs.getString(3),
                         rs.getString(4),
-                        rs.getInt(5),
-                        rs.getString(6),
-                        rs.getString(7),
+                        rs.getString(5),
+                        player_white.getFirstname()+" "+player_white.getLastname(),
+                        player_white.getFirstname()+" "+player_black.getLastname(),
                         rs.getString(8),
                         rs.getInt(9),
                         rs.getInt(10),

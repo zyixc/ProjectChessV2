@@ -41,7 +41,6 @@ public class RequestHandler {
 
     private List<Player> requestTypePlayers(String prequest){
         List<Player> players = db.getPlayers(prequest);
-        System.out.println("ya "+players.toString());
         return players;
     }
 
