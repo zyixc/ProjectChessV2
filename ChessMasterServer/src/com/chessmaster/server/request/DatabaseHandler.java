@@ -26,7 +26,7 @@ public class DatabaseHandler {
 
     public Player getPlayer(String ID){
         Player result = null;
-        try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE id = ?");){
+        try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE id = ? LIMIT 20");){
             spn.setString(1, ID);
             ResultSet spn_rs = spn.executeQuery();
             if(spn_rs.next()){            	
@@ -41,7 +41,7 @@ public class DatabaseHandler {
 
     public List<Player> getPlayers(String player_name){
         List<Player> result = new ArrayList<>();
-        try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE lastName LIKE ?");){
+        try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE lastName LIKE ? LIMIT 20");){
             spn.setString(1, player_name + "%");
             ResultSet spn_rs = spn.executeQuery();
             while(spn_rs.next()){
@@ -115,9 +115,6 @@ public class DatabaseHandler {
         query.append("SELECT * FROM `games` WHERE ");
         if (resultfor.equals("null")) query.append("1 ");
         else query.append(resultfor+" ");
-//        else if (resultfor.equals("w")) query.append("`result` = '1-0' ");
-//        else if (resultfor.equals("b")) query.append("`result` = '0-1' ");
-//        else if (resultfor.equals("d")) query.append("`result` = '1/2-1/2' ");
         if (!minrating.equals("null")) query.append("AND `white_elo` > " + minrating + " AND `black_elo` > " + minrating + " ");
         if (!minrating.equals("null")) query.append("AND `white_elo` < " + maxrating + " AND `black_elo` < " + maxrating + " ");
         if (!whiteopening1.equals("null")) query.append("AND `w1` = '" + whiteopening1 + "' ");

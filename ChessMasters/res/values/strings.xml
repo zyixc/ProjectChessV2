@@ -58,4 +58,7 @@
     <string name="game_detail_screen_player_white">White:</string>
     <string name="game_detail_screen_compare_button">Compare</string>
     <string name="game_detail_screen_result">Result:</string>
+    
+    <!--Dialog screen-->
+    <string name="dialog_text">Processing</string>
 </resources>

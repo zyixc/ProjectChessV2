@@ -1,0 +1,11 @@
+package com.chessmaster.app.ui;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class DialogScreen extends Activity{
+	@Override
+	public void onCreate(Bundle savedInstanceState){
+		
+	}
+}

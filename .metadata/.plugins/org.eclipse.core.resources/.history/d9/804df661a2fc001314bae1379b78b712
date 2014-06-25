@@ -1,0 +1,33 @@
+package com.chessmaster.app.ui;
+
+import android.app.Activity;
+import android.app.Dialog;
+import android.app.DialogFragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.chessmaster.app.R;
+
+public class DialogScreen extends DialogFragment{
+    static DialogScreen newInstance(int num) {
+    	DialogScreen f = new DialogScreen();
+        return f;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        int style = DialogFragment.STYLE_NO_TITLE, theme = R.style.AppTheme;
+        setStyle(style, theme);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+            Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.dialog_screen, container, false);
+        return v;
+    }
+}

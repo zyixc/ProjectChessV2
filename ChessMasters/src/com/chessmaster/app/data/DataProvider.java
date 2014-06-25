@@ -146,9 +146,9 @@ public enum DataProvider{
 
     public List<Game> requestGameList(String resultfor, String minrating, String maxrating, String whiteopening1,
                                       String whiteopening2, String whiteopening3, String blackopening1, String blackopening2,
-                                      String blackopening3, String eco){
-        String[] args = {resultfor,minrating,maxrating,whiteopening1,whiteopening2,whiteopening3,blackopening1,blackopening2,
-        blackopening3,eco};
+                                      String blackopening3, String eco){        
+    	String[] args = {CFN(resultfor),CFN(minrating),CFN(maxrating),CFN(whiteopening1),CFN(whiteopening2),CFN(whiteopening3),
+    			CFN(blackopening1),CFN(blackopening2),CFN(blackopening3),CFN(eco)};
         List<Game> gameList = null;
         DownloadGameList dg = new DownloadGameList();
         dg.execute(args);
@@ -181,6 +181,17 @@ public enum DataProvider{
         }
         return null;
         }
+    }
+    
+    /**
+     * Checks for null, return corrected string.
+     * @param arg
+     * @return
+     */
+    private String CFN(String arg){
+    	if(arg==null||arg.isEmpty())
+    		arg="null";    	
+    	return arg;
     }
 
 }

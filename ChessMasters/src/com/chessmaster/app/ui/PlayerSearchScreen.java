@@ -1,6 +1,9 @@
 package com.chessmaster.app.ui;
 
+import java.util.List;
+
 import android.app.Activity;
+import android.app.Dialog;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +17,6 @@ import com.chessmaster.app.R;
 import com.chessmaster.app.data.DataProvider;
 import com.chessmaster.app.data.Player;
 
-import java.util.List;
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link PlayerSearchScreen.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link PlayerSearchScreen#newInstance} factory method to
- * create an instance of this fragment.
- *
- */
 public class PlayerSearchScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
 
@@ -46,11 +38,11 @@ public class PlayerSearchScreen extends Fragment {
                              Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_player_search_screen,container,false);
         final EditText lastName = (EditText) view.findViewById(R.id.FPSS_lastname_editText);
-        Button buttonPlayerSearch = (Button) view.findViewById(R.id.FPSS_search_button);
-
+        final Button buttonPlayerSearch = (Button) view.findViewById(R.id.FPSS_search_button);
+        
         buttonPlayerSearch.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (DataProvider.INSTANCE.testConnection()) {
+        	public void onClick(View v) {
+        		if (DataProvider.INSTANCE.testConnection()) {
                     if (!lastName.getText().toString().equals("")) {
                         List<Player> playerList = DataProvider.INSTANCE.requestPlayerList(lastName.getText().toString());
                         if(playerList.isEmpty()){
@@ -87,16 +79,6 @@ public class PlayerSearchScreen extends Fragment {
         mListener = null;
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
     public interface OnFragmentInteractionListener {
         enum PlayerSearchScreenOptions{
             PLAYERSEARCHRESULTLISTSCREEN
