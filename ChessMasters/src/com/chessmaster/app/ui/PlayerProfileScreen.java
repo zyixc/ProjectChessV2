@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.chessmaster.app.R;
 import com.chessmaster.app.data.Game;
 import com.chessmaster.app.data.Player;
 

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.chessmaster.app.R;
 import com.chessmaster.app.data.DataProvider;
 import com.chessmaster.app.data.Player;
 

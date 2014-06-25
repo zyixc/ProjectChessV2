@@ -21,35 +21,35 @@
             android:layout_gravity="left|top" />
 
         <RadioGroup
+            android:id="@+id/FCS_Result_RadioGroup"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal|top"
-            android:id="@+id/FCS_Result_RadioGroup">
+            android:layout_height="match_parent" >
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/compare_screen_result_black"
-                android:id="@+id/FCS_result_black_radioButton"
-                android:layout_gravity="center_horizontal|bottom"
-                android:checked="false" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/compare_screen_result_white"
                 android:id="@+id/FCS_result_white_radioButton"
-                android:layout_gravity="center_horizontal|top"
-                android:singleLine="true"
-                android:checked="false" />
-
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/compare_screen_result_draw"
+                android:layout_gravity="top|right"
+                android:checked="false"
+                android:singleLine="true"
+                android:text="@string/compare_screen_result_white" />
+
+            <RadioButton
+                android:id="@+id/FCS_result_black_radioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:checked="false"
+                android:text="@string/compare_screen_result_black" />
+
+            <RadioButton
                 android:id="@+id/FCS_result_draw_radioButton"
-                android:layout_gravity="center"
-                android:checked="false" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:checked="false"
+                android:text="@string/compare_screen_result_draw" />
+
         </RadioGroup>
     </FrameLayout>
 
@@ -68,46 +68,46 @@
             android:layout_gravity="left|top" />
 
         <TextView
+            android:id="@+id/FCS_rating_max"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_gravity="center"
             android:text="@string/compare_screen_rating_max"
-            android:id="@+id/FCS_rating_max"
-            android:layout_gravity="center_horizontal|top" />
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
         <TextView
+            android:id="@+id/FCS_rating_min"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_gravity="top|center"
             android:text="@string/compare_screen_rating_min"
-            android:id="@+id/FCS_rating_min"
-            android:layout_gravity="center" />
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
         <EditText
-            android:layout_width="122dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
             android:id="@+id/FCS_rating_max_editText"
-            android:layout_gravity="top|right" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:ems="10"
+            android:inputType="number" />
 
         <EditText
-            android:layout_width="122dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:ems="10"
             android:id="@+id/FCS_rating_min_editText"
-            android:layout_gravity="right|center_vertical" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:ems="10"
+            android:inputType="number" />
 
     </FrameLayout>
 
     <Button
+        android:id="@+id/FCS_Search_Button"
         android:layout_width="100sp"
         android:layout_height="40sp"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/btnborder"
-        android:textColor="#ffffff"
         android:text="@string/compare_screen_search_button"
-        android:id="@+id/FCS_Search_Button"
-        android:layout_gravity="center_horizontal" />
+        android:textColor="#ffffff" />
 
 </LinearLayout>

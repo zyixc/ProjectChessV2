@@ -1,0 +1,25 @@
+<FrameLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/player_search_screen"
+        android:id="@+id/FPSS_lastname_editText"
+        android:ems="10"
+        android:layout_gravity="center"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_search_screen_search_button"
+        android:id="@+id/FPSS_search_button"
+        android:textColor="#ffffff"
+        android:background="@drawable/btnborder"
+        android:layout_gravity="center_horizontal|bottom" />
+        
+</FrameLayout>

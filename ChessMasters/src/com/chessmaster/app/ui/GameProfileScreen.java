@@ -10,6 +10,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.chessmaster.app.R;
 import com.chessmaster.app.data.Game;
 
 /**

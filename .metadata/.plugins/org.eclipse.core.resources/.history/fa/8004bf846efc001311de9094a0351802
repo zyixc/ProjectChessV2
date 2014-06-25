@@ -1,0 +1,273 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:background="@drawable/customborder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_result"
+            android:id="@+id/fGSS_Result_TextView"
+            android:layout_gravity="left|top" />
+
+        <RadioGroup
+            android:id="@+id/fGSS_Result_RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/fGSS_Result_RadioButton_White"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:text="@string/game_search_screen_result_white"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+            <RadioButton
+                android:id="@+id/fGSS_Result_RadioButton_Black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="@string/game_search_screen_result_black"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+            <RadioButton
+                android:id="@+id/fGSS_Result_RadioButton_Draw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="@string/game_search_screen_result_draw"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+        </RadioGroup>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:background="@drawable/customborder">
+
+        <TextView
+            android:id="@+id/fGSS_Rating_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:text="@string/game_search_screen_rating"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_rating_min"
+            android:id="@+id/fGSS_Rating_TextView_Min"
+            android:layout_gravity="center_horizontal|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_rating_max"
+            android:id="@+id/fGSS_Rating_TextView_Max"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="4"
+            android:id="@+id/fGSS_Rating_EditText_Min"
+            android:layout_gravity="right|top"
+            android:text="@string/null_value" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="4"
+            android:id="@+id/fGSS_Rating_EditText_Max"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/null_value" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:background="@drawable/customborder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_whiteopening"
+            android:id="@+id/fGSS_WhiteOpening_TextView"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/fGSS_WhiteOpening_TextView_1st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="@string/game_search_screen_whiteopening_1st"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_whiteopening_2nd"
+            android:id="@+id/fGSS_WhiteOpening_TextView_2nd"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/fGSS_WhiteOpening_TextView_3rd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="@string/game_search_screen_whiteopening_3rd"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/fGSS_WhiteOpening_EditText_1st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:editable="false"
+            android:ems="5"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+
+        <EditText
+            android:id="@+id/fGSS_WhiteOpening_EditText_2nd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:ems="5"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fGSS_WhiteOpening_EditText_3rd"
+            android:layout_gravity="right|bottom"
+            android:ems="5"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:background="@drawable/customborder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_blackopening"
+            android:id="@+id/fGSS_BlackOpening_TextView"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/fGSS_BlackOpening_TextView_1st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:text="@string/game_search_screen_blackopening_1st"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_blackopening_2nd"
+            android:id="@+id/fGSS_BlackOpening_TextView_2nd"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/fGSS_BlackOpening_TextView_rd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center"
+            android:text="@string/game_search_screen_blackopening_3rd"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/fGSS_BlackOpening_EditText_1st"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:ems="5"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+
+        <EditText
+            android:id="@+id/fGSS_BlackOpening_EditText_2nd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:ems="5"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fGSS_BlackOpening_EditText_3rd"
+            android:layout_gravity="right|bottom"
+            android:ems="5"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:background="@drawable/customborder">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/game_search_screen_eco"
+            android:id="@+id/fGSS_Eco_TextView"
+            android:layout_gravity="left|top" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fGSS_Eco_EditText"
+            android:layout_gravity="center"
+            android:ems="3"
+            android:inputType="textNoSuggestions"
+            android:text="@string/null_value" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.21">
+
+        <Button
+            android:id="@+id/fGSS_Search_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/game_search_screen_button_search" />
+
+    </FrameLayout>
+</LinearLayout>

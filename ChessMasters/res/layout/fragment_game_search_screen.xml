@@ -1,9 +1,7 @@
-<LinearLayout
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="5dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical" >
 
     <FrameLayout
         android:layout_width="fill_parent"
@@ -20,34 +18,35 @@
             android:layout_gravity="left|top" />
 
         <RadioGroup
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="center_horizontal|top"
-            android:id="@+id/fGSS_Result_RadioGroup">
+            android:id="@+id/fGSS_Result_RadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/game_search_screen_result_white"
                 android:id="@+id/fGSS_Result_RadioButton_White"
-                android:layout_gravity="center_horizontal|top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:text="@string/game_search_screen_result_white"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/game_search_screen_result_black"
                 android:id="@+id/fGSS_Result_RadioButton_Black"
-                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="@string/game_search_screen_result_black"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
             <RadioButton
+                android:id="@+id/fGSS_Result_RadioButton_Draw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
                 android:text="@string/game_search_screen_result_draw"
-                android:id="@+id/fGSS_Result_RadioButton_Draw"
-                android:layout_gravity="center_horizontal|bottom"
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
         </RadioGroup>
     </FrameLayout>
 
@@ -58,12 +57,12 @@
         android:background="@drawable/customborder">
 
         <TextView
+            android:id="@+id/fGSS_Rating_TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"
             android:text="@string/game_search_screen_rating"
-            android:id="@+id/fGSS_Rating_TextView"
-            android:layout_gravity="left|top" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -115,12 +114,12 @@
             android:layout_gravity="left|top" />
 
         <TextView
+            android:id="@+id/fGSS_WhiteOpening_TextView_1st"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|center"
             android:text="@string/game_search_screen_whiteopening_1st"
-            android:id="@+id/fGSS_WhiteOpening_TextView_1st"
-            android:layout_gravity="center_horizontal|top" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -131,28 +130,27 @@
             android:layout_gravity="center" />
 
         <TextView
+            android:id="@+id/fGSS_WhiteOpening_TextView_3rd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="right|center"
             android:text="@string/game_search_screen_whiteopening_3rd"
-            android:id="@+id/fGSS_WhiteOpening_TextView_3rd"
-            android:layout_gravity="center_horizontal|bottom" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
+            android:id="@+id/fGSS_WhiteOpening_EditText_1st"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fGSS_WhiteOpening_EditText_1st"
-            android:layout_gravity="right|top"
-            android:inputType="textNoSuggestions"
+            android:layout_gravity="bottom|left"
             android:ems="5"
-            android:editable="false"
+            android:inputType="textNoSuggestions"
             android:text="@string/null_value" />
 
         <EditText
+            android:id="@+id/fGSS_WhiteOpening_EditText_2nd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fGSS_WhiteOpening_EditText_2nd"
-            android:layout_gravity="right|center_vertical"
+            android:layout_gravity="bottom|center"
             android:ems="5"
             android:inputType="textNoSuggestions"
             android:text="@string/null_value" />
@@ -165,13 +163,6 @@
             android:ems="5"
             android:inputType="textNoSuggestions"
             android:text="@string/null_value" />
-
-        <ProgressBar
-            style="?android:attr/progressBarStyleLarge"
-            android:layout_width="199dp"
-            android:layout_height="199dp"
-            android:id="@+id/fGSS_ProgressBar"
-            android:layout_gravity="center"/>
     </FrameLayout>
 
     <FrameLayout
@@ -189,12 +180,12 @@
             android:layout_gravity="left|top" />
 
         <TextView
+            android:id="@+id/fGSS_BlackOpening_TextView_1st"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|center"
             android:text="@string/game_search_screen_blackopening_1st"
-            android:id="@+id/fGSS_BlackOpening_TextView_1st"
-            android:layout_gravity="center_horizontal|top" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -205,27 +196,27 @@
             android:layout_gravity="center" />
 
         <TextView
+            android:id="@+id/fGSS_BlackOpening_TextView_rd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="right|center"
             android:text="@string/game_search_screen_blackopening_3rd"
-            android:id="@+id/fGSS_BlackOpening_TextView_rd"
-            android:layout_gravity="center_horizontal|bottom" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
+            android:id="@+id/fGSS_BlackOpening_EditText_1st"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fGSS_BlackOpening_EditText_1st"
-            android:layout_gravity="right|top"
+            android:layout_gravity="bottom|left"
             android:ems="5"
             android:inputType="textNoSuggestions"
             android:text="@string/null_value" />
 
         <EditText
+            android:id="@+id/fGSS_BlackOpening_EditText_2nd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fGSS_BlackOpening_EditText_2nd"
-            android:layout_gravity="right|center_vertical"
+            android:layout_gravity="bottom|center"
             android:ems="5"
             android:inputType="textNoSuggestions"
             android:text="@string/null_value" />
@@ -271,10 +262,11 @@
         android:layout_weight="0.21">
 
         <Button
-            android:layout_width="140dp"
-            android:layout_height="67dp"
-            android:text="@string/game_search_screen_button_search"
             android:id="@+id/fGSS_Search_Button"
-            android:layout_gravity="center" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/game_search_screen_button_search" />
+
     </FrameLayout>
 </LinearLayout>

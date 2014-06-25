@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.chessmaster.app.R;
 import com.chessmaster.app.data.Player;
 
 import java.util.List;

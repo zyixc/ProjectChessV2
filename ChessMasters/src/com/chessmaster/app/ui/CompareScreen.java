@@ -11,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chessmaster.app.R;
 import com.chessmaster.app.data.DataProvider;
 import com.chessmaster.app.data.Game;
 
