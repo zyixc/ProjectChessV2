@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/action_player_search_screen"
+        android:title="@string/action_player_search_screen"
+        android:showAsAction="always" />
+    <item android:id="@+id/action_game_search_screen"
+        android:title="@string/action_game_search_screen"
+        android:showAsAction="always" />
+</menu>

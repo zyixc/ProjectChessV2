@@ -1,0 +1,113 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5sp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customborder"
+        android:layout_weight="0.3">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="@string/compare_screen_result"
+            android:id="@+id/FCS_result_view"
+            android:layout_gravity="left|top" />
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/FCS_Result_RadioGroup">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compare_screen_result_black"
+                android:id="@+id/FCS_result_black_radioButton"
+                android:layout_gravity="center_horizontal|bottom"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compare_screen_result_white"
+                android:id="@+id/FCS_result_white_radioButton"
+                android:layout_gravity="center_horizontal|top"
+                android:singleLine="true"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/compare_screen_result_draw"
+                android:id="@+id/FCS_result_draw_radioButton"
+                android:layout_gravity="center"
+                android:checked="false" />
+        </RadioGroup>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customborder"
+        android:layout_weight="0.30">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="@string/compare_screen_rating"
+            android:id="@+id/FCS_rating_textView"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="@string/compare_screen_rating_max"
+            android:id="@+id/FCS_rating_max"
+            android:layout_gravity="center_horizontal|top" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="@string/compare_screen_rating_min"
+            android:id="@+id/FCS_rating_min"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/FCS_rating_max_editText"
+            android:layout_gravity="top|right" />
+
+        <EditText
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/FCS_rating_min_editText"
+            android:layout_gravity="right|center_vertical" />
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="100sp"
+        android:layout_height="40sp"
+        android:background="@drawable/btnborder"
+        android:textColor="#ffffff"
+        android:text="@string/compare_screen_search_button"
+        android:id="@+id/FCS_Search_Button"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

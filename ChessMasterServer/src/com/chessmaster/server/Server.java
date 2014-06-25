@@ -63,7 +63,7 @@ public class Server implements Runnable{
 
     public static void main(String[] args) {
         Server server = new Server(args[0]);
-        System.out.println("Java Server Started!");
+        System.out.println("Java Server Started! on 127.0.0.1:"+args[0]);
         while(true) {
             new Thread(server).start();
             try {
