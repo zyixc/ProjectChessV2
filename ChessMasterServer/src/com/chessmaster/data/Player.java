@@ -9,7 +9,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by zyixc on 20-5-2014.
+ * Class that contains all information about a Player.
+ * @author zyixc
  */
 public class Player{
     private String id;

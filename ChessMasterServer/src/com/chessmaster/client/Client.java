@@ -14,6 +14,7 @@ import java.net.Socket;
 import java.util.List;
 
 /**
+ * Client class, contains all methods that can be used by the client.
  * @author zyixc
  */
 public enum Client {

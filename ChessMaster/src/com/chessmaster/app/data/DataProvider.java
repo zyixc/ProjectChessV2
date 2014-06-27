@@ -16,7 +16,9 @@ import java.util.List;
 
 
 /**
- * Created by zyixc on 15-5-2014.
+ * Provides the App with data,
+ * data is requested from the server.
+ * @author zyixc
  */
 public enum DataProvider{
     INSTANCE;
@@ -28,7 +30,12 @@ public enum DataProvider{
     private OutputStream os;
     private BufferedReader in;
     private SharedPreferences prefs;
-
+    
+    /**
+     * Initializes the preferences provided by SettingsActivity
+     * @param sp
+     * @see SettingsActivity
+     */
     public void initDataProvider(SharedPreferences sp){
         prefs = sp;
         if (!prefs.contains("ip")) writeDefaults();
@@ -70,7 +77,12 @@ public enum DataProvider{
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Checks if a connection to server can be established.
+     * @return boolean true if successful
+     * @return boolean false if unsuccessful
+     */
     public boolean testConnection(){
         boolean result = false;
         DownloadTestConnection test = new DownloadTestConnection();
@@ -93,7 +105,13 @@ public enum DataProvider{
             return false;
         }
     }
-
+    
+    /**
+     * Requests a player from the server.
+     * @param id
+     * @return Player
+     * @return null if no result found
+     */
     public Player requestPlayer(String id) {
         try {
             openConnection();
@@ -110,7 +128,15 @@ public enum DataProvider{
         }
         return null;
     }
-
+    
+    /**
+     * Requests a List of Players from the server.
+     * @param namestring name prefix
+     * @return List of Players
+     * @return null if no results found
+     * @see Player
+     * @see List
+     */
     public List<Player> requestPlayerList(String namestring){
         List<Player> playerList = null;
         DownloadPlayerList dp = new DownloadPlayerList();
@@ -144,6 +170,24 @@ public enum DataProvider{
         }
     }
 
+    
+    /**
+     * Requests a List of Games from the server.
+     * @param resultfor 1-0, 1/2-1/2, 0-1
+     * @param minrating 0 - 9999
+     * @param maxrating 0 - 9999
+     * @param whiteopening1 chess move
+     * @param whiteopening2 chess move
+     * @param whiteopening3 chess move
+     * @param blackopening1 chess move
+     * @param blackopening2 chess move
+     * @param blackopening3 chess move
+     * @param eco Universal chess openings
+     * @return List of Games 
+     * @return null no results found
+     * @see List
+     * @see Game
+     */
     public List<Game> requestGameList(String resultfor, String minrating, String maxrating, String whiteopening1,
                                       String whiteopening2, String whiteopening3, String blackopening1, String blackopening2,
                                       String blackopening3, String eco){        

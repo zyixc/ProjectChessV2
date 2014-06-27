@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
+ * Server sub class to handle client connections.
  * @author zyixc
  **/
 public class WorkerRunnable implements Runnable{
@@ -27,7 +28,6 @@ public class WorkerRunnable implements Runnable{
     
     /**
      * Handles a client request
-     * @return void
      */
     public void run() {
         try(DataInputStream is = new DataInputStream(clientSocket.getInputStream());

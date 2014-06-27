@@ -7,7 +7,8 @@ import java.nio.file.Path;
 import java.util.List;
 
 /**
- * Created by zyixc on 4-6-2014.
+ * Handles requests from the server.
+ * @author zyixc
  */
 public class RequestHandler {
     private DatabaseHandler db;

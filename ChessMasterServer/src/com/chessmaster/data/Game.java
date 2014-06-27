@@ -1,6 +1,7 @@
 package com.chessmaster.data;
 
 /**
+ * Class thats contains all information about a Game.
  * @author zyixc
  */
 public class Game {

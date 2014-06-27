@@ -10,6 +10,9 @@ import android.preference.PreferenceCategory;
 
 import com.chessmaster.app.data.DataProvider;
 
+/**
+ * @author Lars Vogel
+ */
 public class SettingsActivity extends PreferenceActivity implements
         OnSharedPreferenceChangeListener {
 
@@ -55,7 +58,7 @@ public class SettingsActivity extends PreferenceActivity implements
             updatePreferences(p);
         }
     }
-
+    
     private void updatePreferences(Preference p) {
         if (p instanceof EditTextPreference) {
             EditTextPreference editTextPref = (EditTextPreference) p;

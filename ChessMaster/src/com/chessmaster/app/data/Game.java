@@ -1,7 +1,8 @@
 package com.chessmaster.app.data;
 
 /**
- * Created by zyixc on 20-5-2014.
+ * Class thats contains all information about a Game.
+ * @author zyixc
  */
 public class Game {
     private String gameid;

@@ -6,7 +6,9 @@ import com.chessmaster.data.Player;
 import java.util.List;
 
 /**
+ * Test for the Client class.
  * @author zyixc
+ * @see Client
  */
 public class runClientTest {
 	/**

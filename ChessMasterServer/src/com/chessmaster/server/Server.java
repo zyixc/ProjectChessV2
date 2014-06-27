@@ -4,6 +4,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.IOException;
 /**
+ * Main server Class.
  * @author Jakob Jenkov
  * @author zyixc
  **/
@@ -27,7 +28,6 @@ public class Server implements Runnable{
      * Thread that listens for incoming connections,
      * if connection is made starts a WorkerRunnable object
      * to handle client communication.
-     * @return void
      */
     public void run(){
         synchronized(this){
@@ -56,7 +56,6 @@ public class Server implements Runnable{
     
     /**
      * Stops the server
-     * @return void
      */
     public synchronized void stop(){
         this.isStopped = true;
@@ -79,7 +78,6 @@ public class Server implements Runnable{
      * Starts the server
      * Takes port number as an argument, default 8080
      * @param args
-     * @return void
      */
     public static void main(String[] args) {
         if(args.length == 0){

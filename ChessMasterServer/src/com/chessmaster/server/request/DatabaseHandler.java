@@ -8,6 +8,10 @@ import com.chessmaster.data.Game;
 import com.chessmaster.data.Player;
 
 /**
+ * Handles connections with the database.
+ * Hardcoded values: 	url = "jdbc:mysql://localhost:3306/chess"
+    					login = "root"
+    					password = "root"
  * @author zyixc
  */
 public class DatabaseHandler {

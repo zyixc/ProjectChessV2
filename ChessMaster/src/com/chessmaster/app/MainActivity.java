@@ -20,7 +20,10 @@ import com.chessmaster.app.ui.PlayerSearchScreen;
 import com.chessmaster.app.ui.StartScreen;
 
 import java.util.List;
-
+/**
+ * MainActivity Controls all UI fragments
+ * @author zyixc
+ */
 public class MainActivity extends FragmentActivity
         implements StartScreen.OnFragmentInteractionListener,
         PlayerSearchScreen.OnFragmentInteractionListener,
@@ -30,7 +33,7 @@ public class MainActivity extends FragmentActivity
         GameSearchResultListScreen.OnFragmentInteractionListener,
         GameProfileScreen.OnFragmentInteractionListener,
         CompareScreen.OnFragmentInteractionListener{
-
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +46,7 @@ public class MainActivity extends FragmentActivity
         }
         DataProvider.INSTANCE.initDataProvider(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()));
     }
-
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -74,7 +77,7 @@ public class MainActivity extends FragmentActivity
         }
         return super.onOptionsItemSelected(item);
     }
-
+    
     @Override
     public void onBackPressed(){
         if(getFragmentManager().getBackStackEntryCount()==1){
@@ -83,7 +86,11 @@ public class MainActivity extends FragmentActivity
             getFragmentManager().popBackStack();
         }
     }
-
+    
+    /**
+     * Handles request to move to next screen.
+     * From StartScreen to PlayersSearchScreen/GameSearchScreen.
+     */
     public void fromStartScreenTo(StartScreenOptions options){
         if(options == StartScreenOptions.PLAYERSEARCHSCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, PlayerSearchScreen.newInstance())
@@ -95,20 +102,32 @@ public class MainActivity extends FragmentActivity
                 .commit();
     }
 
+    /**
+     * Handles request to move to next screen.
+     * From PlayerSearchScreen to PlayersSearchResultListScreen.
+     */
     public void fromPlayerSearchScreenTo(PlayerSearchScreenOptions options, List<Player> players){
         if(options == PlayerSearchScreenOptions.PLAYERSEARCHRESULTLISTSCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, PlayerSearchResultListScreen.newInstance(players))
                 .addToBackStack(null)
                 .commit();
     }
-
+    
+    /**
+     * Handles request to move to next screen.
+     * From PlayerSearchResultListScreen to PlayerProfileScreen.
+     */
     public void fromPlayerSearchResultListTo(PlayerSearchResultListScreenOptions options, Player player){
         if(options == PlayerSearchResultListScreenOptions.PLAYERPROFILESCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, PlayerProfileScreen.newInstance(player))
                 .addToBackStack(null)
                 .commit();
     }
-
+    
+    /**
+     * Handles request to move to next screen.
+     * From PlayerProfileScreen to GameSearchResultListScreen.
+     */
     public void fromPlayerProfileScreenTo(PlayerProfileScreenOptions options, List<Game> games){
         if(options == PlayerProfileScreenOptions.GAMESEARCHRESULTLISTSCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, GameSearchResultListScreen.newInstance(games))
@@ -116,6 +135,10 @@ public class MainActivity extends FragmentActivity
                 .commit();
     }
 
+    /**
+     * Handles request to move to next screen.
+     * From GameSearchScreen to GameSearchRsultListScreen.
+     */
     public void fromGameSearchScreenTo(GameSearchScreenOptions options, List<Game> games){
         if(options == GameSearchScreenOptions.GAMESEARCHRESULTLISTSCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, GameSearchResultListScreen.newInstance(games))
@@ -123,6 +146,10 @@ public class MainActivity extends FragmentActivity
                 .commit();
     }
 
+    /**
+     * Handles request to move to next screen.
+     * From GameSearchResultListScreen to GameProfileScreen.
+     */
     public void fromGameSearchResultListTo(GameSearchResultListScreenOptions options, Game game){
         if(options == GameSearchResultListScreenOptions.GAMEPROFILESCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, GameProfileScreen.newInstance(game))
@@ -130,6 +157,10 @@ public class MainActivity extends FragmentActivity
                 .commit();
     }
 
+    /**
+     * Handles request to move to next screen.
+     * From GameProfileScreen to CompareScreen.
+     */
     public void fromGameProfileScreenTo(GameProfileScreenOptions options, Game game){
         if(options == GameProfileScreenOptions.COMPARESCREEN) getFragmentManager()
                 .beginTransaction().replace(R.id.container, CompareScreen.newInstance(game))
@@ -137,6 +168,10 @@ public class MainActivity extends FragmentActivity
                 .commit();
     }
 
+    /**
+     * Handles request to move to next screen.
+     * From CompareScreen to GameSearchResultListScreen.
+     */
     public void fromCompareScreenTo(CompareScreenOptions options, List<Game> games){
         if(options == CompareScreenOptions.GAMESEARCHRESULTLIST) getFragmentManager()
                 .beginTransaction().replace(R.id.container, GameSearchResultListScreen.newInstance(games))
