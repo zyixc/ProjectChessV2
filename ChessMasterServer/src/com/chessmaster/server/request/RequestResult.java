@@ -7,16 +7,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Created by zyixc on 4-6-2014.
+ * @author zyixc
  */
 public class RequestResult<T> {
-    Object result;
-    ObjectMapper mapper = new ObjectMapper();
-
+    private Object result;
+    private ObjectMapper mapper = new ObjectMapper();
+    
+    /**
+     * Constructor
+     * @param objecttype
+     */
     public RequestResult(T objecttype){
         this.result = objecttype;
     }
-
+    
+    /**
+     * Creates a Path and stores the to be send JSON file there
+     * @return Path Where JSON file is stored
+     * @see Path
+     */
     public Path getJSONPath(){
         File file = new File(System.getProperty("user.dir") + File.separator + "JSON_files");
         if (!file.exists()) {
@@ -34,7 +43,11 @@ public class RequestResult<T> {
         }
         return Paths.get(filepath);
     }
-
+    
+    /**
+     * @return JSON file in string format
+     * @see String
+     */
     public String getJSONString(){
         String filestring = null;
         try {

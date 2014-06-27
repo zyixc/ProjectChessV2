@@ -8,14 +8,17 @@ import com.chessmaster.data.Game;
 import com.chessmaster.data.Player;
 
 /**
- * Created by zyixc on 4-6-2014.
+ * @author zyixc
  */
 public class DatabaseHandler {
-    private String url = "jdbc:mysql://localhost:3311/chess";
+    private String url = "jdbc:mysql://localhost:3306/chess";
     private String login = "root";
     private String password = "root";
     private Connection conn;
-
+    
+    /**
+     * Constructor
+     */
     public DatabaseHandler(){
         try{
             conn = DriverManager.getConnection(url,login,password);
@@ -23,10 +26,17 @@ public class DatabaseHandler {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Retrieve a Player from the database
+     * @param ID the player id
+     * @return Player 
+	 * @return null if no results found
+     * @see Player
+     */
     public Player getPlayer(String ID){
         Player result = null;
-        try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE id = ? LIMIT 20");){
+        try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE id = ?");){
             spn.setString(1, ID);
             ResultSet spn_rs = spn.executeQuery();
             if(spn_rs.next()){            	
@@ -38,7 +48,15 @@ public class DatabaseHandler {
         }
         return null;
     }
-
+    
+    /**
+     * Retrieve Players from the database
+     * @param player_name string to compare against database
+     * @return List of Players 
+     * @return null if no results found
+     * @see List
+     * @see Player
+     */
     public List<Player> getPlayers(String player_name){
         List<Player> result = new ArrayList<>();
         try(PreparedStatement spn = conn.prepareStatement("SELECT * FROM players WHERE lastName LIKE ? LIMIT 20");){
@@ -89,8 +107,8 @@ public class DatabaseHandler {
         }
         return null;
     }
-
-    public Player getGamesFromPlayer(Player player){
+     
+    private Player getGamesFromPlayer(Player player){
         String queryWhiteGames = "SELECT * FROM games WHERE white = "+player.getId();
         String queryBlackGames = "SELECT * FROM games WHERE black = "+player.getId();
         List<Game> whitegames = queryGames(queryWhiteGames);
@@ -107,7 +125,24 @@ public class DatabaseHandler {
         }
         return player;
     }
-
+    
+    /**
+     * Retrieve Games from the database
+     * @param resultfor 1-0, 1/2-1/2, 0-1
+     * @param minrating 0 - 9999
+     * @param maxrating 0 - 9999
+     * @param whiteopening1 chess move
+     * @param whiteopening2 chess move
+     * @param whiteopening3 chess move
+     * @param blackopening1 chess move
+     * @param blackopening2 chess move
+     * @param blackopening3 chess move
+     * @param eco Universal chess openings
+     * @return List of Games 
+     * @return null no results found
+     * @see List
+     * @see Game
+     */
     public List<Game> getGames(String resultfor, String minrating, String maxrating, String whiteopening1,
                             String whiteopening2, String whiteopening3, String blackopening1, String blackopening2,
                             String blackopening3, String eco){
@@ -127,15 +162,5 @@ public class DatabaseHandler {
         query.append("ORDER BY `id` ASC LIMIT 100");
 
         return queryGames(query.toString());
-    }
-
-    public static void main(String[] args){
-        DatabaseHandler db = new DatabaseHandler();
-        List<Game> games = db.getGames(null,null,null,null,null,null,null,null,null,null);
-        if(games != null) {
-            System.out.println("games found");
-        }else{
-            System.out.println("no games found");
-        }
     }
 }

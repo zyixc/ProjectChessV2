@@ -1,7 +1,7 @@
 package com.chessmaster.data;
 
 /**
- * Created by zyixc on 20-5-2014.
+ * @author zyixc
  */
 public class Game {
     private String gameid;
@@ -18,9 +18,6 @@ public class Game {
     private String moves;
     private String[] w;
     private String[] b;
-
-    //private Map<Integer,String> moves_white = new HashMap<Integer,String>();
-    //private Map<Integer,String> moves_black = new HashMap<Integer,String>();
 
     public Game(){}
 

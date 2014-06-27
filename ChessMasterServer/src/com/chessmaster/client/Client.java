@@ -14,11 +14,11 @@ import java.net.Socket;
 import java.util.List;
 
 /**
- * Created by zyixc on 15-5-2014.
+ * @author zyixc
  */
 public enum Client {
     INSTANCE;
-    ;
+    
     private final static String hostname = "localhost";
     private final static int port = 8080;
     private ObjectMapper mapper = new ObjectMapper();
@@ -27,7 +27,7 @@ public enum Client {
     private static OutputStream os;
     private static BufferedReader in;
 
-
+    
     private void openConnection(){
         try{
             socket = new Socket(hostname,port);
@@ -49,7 +49,14 @@ public enum Client {
             e.printStackTrace();
         }
     }
-
+    
+    /**
+     * Requests a player from the server
+     * @param id player_id
+     * @return Player
+     * @return null if no results found
+     * @see Player
+     */
     public Player requestPlayer(String id){
         try{
             openConnection();
@@ -66,7 +73,15 @@ public enum Client {
         }
         return null;
     }
-
+    
+    /**
+     * Request a player list from the server
+     * @param namestring
+     * @return List of Players
+     * @return null if no results found
+     * @see Player
+     * @see List
+     */
     public List<Player> requestPlayerList(String namestring){
         try{
             openConnection();
@@ -84,7 +99,24 @@ public enum Client {
         }
         return null;
     }
-
+    
+    /**
+     * Request a list of games from the server
+     * @param resultfor 1-0, 1/2-1/2, 0-1
+     * @param minrating 0 - 9999
+     * @param maxrating 0 - 9999
+     * @param whiteopening1 chess move
+     * @param whiteopening2 chess move
+     * @param whiteopening3 chess move
+     * @param blackopening1 chess move
+     * @param blackopening2 chess move
+     * @param blackopening3 chess move
+     * @param eco Universal chess openings
+     * @return List of Games
+     * @return null if no results found
+     * @see Game
+     * @see List
+     */
     public List<Game> requestGameList(String resultfor, String minrating, String maxrating, String whiteopening1,
                                       String whiteopening2, String whiteopening3, String blackopening1, String blackopening2,
                                       String blackopening3, String eco){

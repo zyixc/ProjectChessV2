@@ -9,19 +9,26 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 /**
- * Created by Jakob Jenkov
- * Edited by zyixc
+ * @author zyixc
  **/
 public class WorkerRunnable implements Runnable{
-
     protected Socket clientSocket = null;
     protected String serverText   = null;
 
+    /**
+     * Constructor
+     * @param clientSocket
+     * @param serverText
+     */
     public WorkerRunnable(Socket clientSocket, String serverText) {
         this.clientSocket = clientSocket;
         this.serverText   = serverText;
     }
-
+    
+    /**
+     * Handles a client request
+     * @return void
+     */
     public void run() {
         try(DataInputStream is = new DataInputStream(clientSocket.getInputStream());
             DataOutputStream os = new DataOutputStream(clientSocket.getOutputStream());

@@ -12,11 +12,21 @@ import java.util.List;
 public class RequestHandler {
     private DatabaseHandler db;
     private String request;
-
+    
+    /**
+     * Constructor
+     * @param request <request><type{player,players,game}@<arguments>
+     */
     public RequestHandler(String request){
         this.request = request;
     }
-
+    
+    /**
+     * Processes the request, returns results
+     * @return Path to file
+     * @return null if no results found
+     * @see Path
+     */
     public Path processRequest(){
         db = new DatabaseHandler();
         String[] prequest = request.split("[\\.\\?=&@]+");
@@ -48,12 +58,5 @@ public class RequestHandler {
         List<Game> games = db.getGames(prequest[2],prequest[3],prequest[4],prequest[5],prequest[6],prequest[7],prequest[8],prequest[9],
                 prequest[10],prequest[11]);
         return games;
-    }
-
-    //test
-    public static void main(String[] args){
-        RequestHandler rq = new RequestHandler("request.players?Aagaard");
-        Path path = rq.processRequest();
-        System.out.println(path.toString());
     }
 }
