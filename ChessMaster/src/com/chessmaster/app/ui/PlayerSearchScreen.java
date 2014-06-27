@@ -3,7 +3,6 @@ package com.chessmaster.app.ui;
 import java.util.List;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,14 +15,26 @@ import android.widget.Toast;
 import com.chessmaster.app.R;
 import com.chessmaster.app.data.DataProvider;
 import com.chessmaster.app.data.Player;
-
+/**
+ * PlayerSearchScreen ui fragment
+ * @author zyixc
+ */
 public class PlayerSearchScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
-
+    
+    /**
+     * Creates a new instance
+     * @return Fragment
+     * @see Fragment
+     */
     public static PlayerSearchScreen newInstance() {
         PlayerSearchScreen fragment = new PlayerSearchScreen();
         return fragment;
     }
+    
+    /**
+     * Empty constructor
+     */
     public PlayerSearchScreen() {
         // Required empty public constructor
     }
@@ -78,7 +89,11 @@ public class PlayerSearchScreen extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
+    
+    /**     
+     * Interface to be implemented by MainActivity
+     * @author zyixc
+     */
     public interface OnFragmentInteractionListener {
         enum PlayerSearchScreenOptions{
             PLAYERSEARCHRESULTLISTSCREEN

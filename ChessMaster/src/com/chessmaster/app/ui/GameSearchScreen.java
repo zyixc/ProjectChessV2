@@ -17,13 +17,26 @@ import com.chessmaster.app.data.Game;
 
 import java.util.List;
 
+/**
+ * GameProfileResultListScreen ui Fragment
+ * @author zyixc
+ */
 public class GameSearchScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
 
+    /**
+     * Creates a new Instance 
+     * @return Fragment
+     * @see Fragment
+     */
     public static GameSearchScreen newInstance() {
         GameSearchScreen fragment = new GameSearchScreen();
         return fragment;
     }
+    
+    /**
+     * Empty constructor
+     */
     public GameSearchScreen() {
         // Required empty public constructor
     }
@@ -93,6 +106,10 @@ public class GameSearchScreen extends Fragment {
         mListener = null;
     }
 
+    /**
+     * Interface to be implemented by MainActivity
+     * @author zyixc
+     */
     public interface OnFragmentInteractionListener {
         enum GameSearchScreenOptions{
             GAMESEARCHRESULTLISTSCREEN

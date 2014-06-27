@@ -17,16 +17,28 @@ import com.chessmaster.app.data.Player;
 
 import java.util.List;
 
+/**
+ * GameProfileResultListScreen ui Fragment
+ * @author zyixc
+ */
 public class PlayerSearchResultListScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
     public static List<Player> listOfPlayers;
 
+    /**
+     * Creates a new instance
+     * @param playerList
+     * @return
+     */
     public static PlayerSearchResultListScreen newInstance(List<Player> playerList) {
         PlayerSearchResultListScreen fragment = new PlayerSearchResultListScreen();
         listOfPlayers = playerList;
         return fragment;
     }
-
+    
+    /**
+     * Empty constructor
+     */
     public PlayerSearchResultListScreen() {
         // Required empty public constructor
     }
@@ -70,7 +82,11 @@ public class PlayerSearchResultListScreen extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
+    
+    /**
+     * Interface to be implemented by MainActivity
+     * @author zyixc
+     */
     public interface OnFragmentInteractionListener {
         enum PlayerSearchResultListScreenOptions{
             PLAYERPROFILESCREEN

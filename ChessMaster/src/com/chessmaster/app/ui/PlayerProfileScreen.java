@@ -16,23 +16,28 @@ import java.util.List;
 import java.util.ListIterator;
 
 /**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link PlayerProfileScreen.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link PlayerProfileScreen#newInstance} factory method to
- * create an instance of this fragment.
- *
+ * GameProfileScreen ui Fragment
+ * @author zyixc
  */
 public class PlayerProfileScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
     private static Player player;
-
+    
+    /**
+     * Creates a new Instance
+     * @param passedplayer
+     * @return Fragment
+     * @see Fragment
+     */
     public static PlayerProfileScreen newInstance(Player passedplayer) {
         PlayerProfileScreen fragment = new PlayerProfileScreen();
         player = passedplayer;
         return fragment;
     }
+    
+    /**
+     * Empty constructor
+     */
     public PlayerProfileScreen() {
         // Required empty public constructor
     }
@@ -131,14 +136,8 @@ public class PlayerProfileScreen extends Fragment {
     }
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
+     * Interface to be implemented by MainActivity
+     * @author zyixc
      */
     public interface OnFragmentInteractionListener {
         enum PlayerProfileScreenOptions{

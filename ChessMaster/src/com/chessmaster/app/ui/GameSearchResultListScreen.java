@@ -17,15 +17,29 @@ import com.chessmaster.app.data.Game;
 
 import java.util.List;
 
+/**
+ * GameProfileResultListScreen ui Fragment
+ * @author zyixc
+ */
 public class GameSearchResultListScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
     private static List<Game> listOfGames;
-
+    
+    /**
+     * Creates a new Instance 
+     * @param linkedgames
+     * @return Fragment
+     * @see Fragment
+     */
     public static GameSearchResultListScreen newInstance(List<Game> linkedgames) {
         GameSearchResultListScreen fragment = new GameSearchResultListScreen();
         listOfGames = linkedgames;
         return fragment;
     }
+    
+    /**
+     * Empty constructor
+     */
     public GameSearchResultListScreen() {
         // Required empty public constructor
     }
@@ -72,14 +86,8 @@ public class GameSearchResultListScreen extends Fragment {
     }
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
+     * Interface to be implemented by MainActivity
+     * @author zyixc
      */
     public interface OnFragmentInteractionListener {
         enum GameSearchResultListScreenOptions{

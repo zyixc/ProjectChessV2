@@ -10,14 +10,26 @@ import android.widget.Button;
 
 import com.chessmaster.app.R;
 
+/**
+ * StartScreen ui fragment
+ * @author zyixc
+ */
 public class StartScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
-
+    
+    /**
+     * Creates a new instance
+     * @return Fragment
+     * @see Fragment
+     */
     public static StartScreen newInstance() {
         StartScreen fragment = new StartScreen();
         return fragment;
     }
-
+    
+    /**
+     * Empty constructor
+     */
     public StartScreen() {
         // Required empty public constructor
     }
@@ -65,14 +77,8 @@ public class StartScreen extends Fragment {
     }
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
+     * Interface to be implemented by MainActivity
+     * @author zyixc
      */
     public interface OnFragmentInteractionListener {
         enum StartScreenOptions{

@@ -17,15 +17,29 @@ import com.chessmaster.app.data.Game;
 
 import java.util.List;
 
+/**
+ * CompareScreen ui Fragment
+ * @author zyixc
+ */
 public class CompareScreen extends Fragment {
     private OnFragmentInteractionListener mListener;
     private static Game game;
-
+    
+    /**
+     * Creates a new Instance 
+     * @param linkedgame
+     * @return Fragment
+     * @see Fragment
+     */
     public static CompareScreen newInstance(Game linkedgame) {
         CompareScreen fragment = new CompareScreen();
         game = linkedgame;
         return fragment;
     }
+    
+    /**
+     * Empty constructor
+     */
     public CompareScreen() {
         // Required empty public constructor
     }
@@ -90,7 +104,12 @@ public class CompareScreen extends Fragment {
         super.onDetach();
         mListener = null;
     }
-
+    
+    
+    /**
+     * Interface to be implemented by MainActivity
+     * @author zyixc
+     */
     public interface OnFragmentInteractionListener {
         public enum CompareScreenOptions{
             GAMESEARCHRESULTLIST
