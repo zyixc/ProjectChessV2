@@ -1,7 +1,0 @@
-package com.chessmaster.app.ui;
-
-public class DialogScreen {
-	public DialogScreen(){
-		
-	}
-}
