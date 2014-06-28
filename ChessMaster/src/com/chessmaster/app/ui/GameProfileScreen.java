@@ -56,7 +56,10 @@ public class GameProfileScreen extends Fragment {
         final Button compare = (Button) view.findViewById(R.id.fGPS_Compare_Button);
         WebView webview = (WebView) view.findViewById(R.id.fGPS_WebView);
         webview.getSettings().setJavaScriptEnabled(true);
-        webview.loadUrl("http://treegarden.nl/chess/index.html?moves="+game.getMoves());
+        webview.getSettings().setLoadWithOverviewMode(true);
+        webview.getSettings().setUseWideViewPort(true);
+        
+        webview.loadUrl("http://treegarden.nl/chess/index.html?moves=\""+game.getMoves()+" "+game.getResult()+"\"");
         compare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +75,7 @@ public class GameProfileScreen extends Fragment {
 
         return view;
     }
-
+    
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

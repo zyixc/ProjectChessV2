@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<item value="C:\ProjectChessGroup5-527173\Code\workspace\ProjectChessV2\ExternalLibraries" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="0" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<section name="OptionalMessageDialog.hide.">
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="true" key="group_libraries"/>
 		<item value="false" key="linkWithEditor"/>
@@ -14,8 +16,69 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="BuildPathsPropertyPage">
-		<item value="2" key="pageIndex"/>
+		<item value="3" key="pageIndex"/>
+	</section>
+	<section name="FatJarPackageWizard">
+		<item value="C:\ProjectChessGroup5-527173\Server\server.jar" key="FatJarPackageWizardPage.DESTINATION_PATH_SELECTION"/>
+		<item value="ChessMasterServerConfiguration - ChessMasterServer" key="FatJarPackageWizardPage.LAUNCH_CONFIGURATION_SELECTION_NAME"/>
+		<item value="C:\ProjectChessGroup5-527173\Code\workspace\ProjectChessV2" key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION"/>
+		<item value="false" key="FatJarPackageWizardPage.ANTSCRIPT_SAVE"/>
+		<item value="2" key="FatJarPackageWizardPage.LIBRARY_HANDLING"/>
+		<list key="FatJarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\ProjectChessGroup5-527173\Server\server.jar"/>
+		</list>
+		<list key="FatJarPackageWizardPage.ANTSCRIPT_LOCATION_HISTORY">
+			<item value="C:\ProjectChessGroup5-527173\Code\workspace\ProjectChessV2.xml"/>
+			<item value=".xml"/>
+		</list>
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="ProblemSeveritiesConfigurationBlock">
+		<item value="false" key="expanded4"/>
+		<item value="false" key="expanded3"/>
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="false" key="expanded7"/>
+		<item value="false" key="expanded6"/>
+		<item value="false" key="expanded5"/>
+		<item value="true" key="expanded0"/>
+	</section>
+	<section name="JavaBuildConfigurationBlock">
+		<item value="false" key="expanded2"/>
+		<item value="false" key="expanded1"/>
+		<item value="true" key="expanded0"/>
+	</section>
+	<section name="javadoc">
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="false" key="notree"/>
+		<item value="true" key="splitindex"/>
+		<item value="C:\Program Files\Java\jdk1.7.0_04\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="true" key="use"/>
+		<item value="false" key="nonavbar"/>
+		<item value="protected" key="access"/>
+		<item value="true" key="version"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="C:\ProjectChessGroup5-527173\Documentation\JavaDoc\Server" key="destdir"/>
+		<item value="true" key="author"/>
+		<item value="" key="docletname"/>
+		<item value="1.7" key="source"/>
+		<item value="false" key="openinbrowser"/>
+		<item value="false" key="noindex"/>
+		<item value="" key="docletpath"/>
+		<item value="C:\ProjectChessGroup5-527173\Code\workspace\ProjectChessV2\ChessMaster\javadoc.xml" key="antpath"/>
+		<item value="true" key="fromStandard"/>
+		<section name="projects">
+			<section name="ChessMaster">
+				<item value="C:\ProjectChessGroup5-527173\Documentation\JavaDoc\AndroidApp" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\ProjectChessGroup5-527173\Code\workspace\ProjectChessV2\ChessMaster\javadoc.xml" key="antpath"/>
+			</section>
+			<section name="ChessMasterServer">
+				<item value="C:\ProjectChessGroup5-527173\Documentation\JavaDoc\Server" key="destdir"/>
+				<item value="" key="href"/>
+				<item value="C:\ProjectChessGroup5-527173\Code\workspace\ProjectChessV2\ChessMaster\javadoc.xml" key="antpath"/>
+			</section>
+		</section>
 	</section>
 </section>

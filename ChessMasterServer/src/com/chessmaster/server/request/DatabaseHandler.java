@@ -153,18 +153,18 @@ public class DatabaseHandler {
         StringBuilder query = new StringBuilder();
         query.append("SELECT * FROM `games` WHERE ");
         if (resultfor.equals("null")) query.append("1 ");
-        else query.append(resultfor+" ");
-        if (!minrating.equals("null")) query.append("AND `white_elo` > " + minrating + " AND `black_elo` > " + minrating + " ");
-        if (!minrating.equals("null")) query.append("AND `white_elo` < " + maxrating + " AND `black_elo` < " + maxrating + " ");
+        else query.append("result = \""+resultfor+"\" ");
+        if (!minrating.equals("null")) query.append("AND `white_elo` >= " + minrating + " AND `black_elo` >= " + minrating + " ");
+        if (!minrating.equals("null")) query.append("AND `white_elo` <= " + maxrating + " AND `black_elo` <= " + maxrating + " ");
         if (!whiteopening1.equals("null")) query.append("AND `w1` = '" + whiteopening1 + "' ");
         if (!whiteopening2.equals("null")) query.append("AND `w2` = '" + whiteopening2 + "' ");
         if (!whiteopening3.equals("null")) query.append("AND `w3` = '" + whiteopening3 + "' ");
-        if (!blackopening1.equals("null")) query.append("AND `w1` = '" + blackopening1 + "' ");
-        if (!blackopening2.equals("null")) query.append("AND `w2` = '" + blackopening2 + "' ");
-        if (!blackopening3.equals("null")) query.append("AND `w3` = '" + blackopening3 + "' ");
+        if (!blackopening1.equals("null")) query.append("AND `b1` = '" + blackopening1 + "' ");
+        if (!blackopening2.equals("null")) query.append("AND `b2` = '" + blackopening2 + "' ");
+        if (!blackopening3.equals("null")) query.append("AND `b3` = '" + blackopening3 + "' ");
         if (!eco.equals("null")) query.append("AND `eco` = '" + eco + "' ");
-        query.append("ORDER BY `id` ASC LIMIT 100");
-
+        query.append("LIMIT 100");
+        System.out.println(">>>> "+query.toString());
         return queryGames(query.toString());
     }
 }

@@ -1,0 +1,5 @@
+#Sat Jun 28 09:36:27 CEST 2014
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=run

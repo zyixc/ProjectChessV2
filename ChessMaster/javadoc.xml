@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="protected" additionalparam=" -encoding UTF-8" author="true" classpath="../ExternalLibraries/jackson-annotations-2.4.0.jar;../ExternalLibraries/jackson-databind-2.4.0.jar;../ExternalLibraries/jackson-core-2.4.0.jar;libs/android-support-v4.jar" destdir="C:\ProjectChessGroup5-527173\Documentation\JavaDoc\AndroidApp" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="com.chessmaster.app,com.chessmaster.app.ui,com.chessmaster.app.data" source="1.6" sourcepath="gen;src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

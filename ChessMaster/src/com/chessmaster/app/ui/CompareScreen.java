@@ -73,8 +73,7 @@ public class CompareScreen extends Fragment {
                             break;
                     }
                     List<Game> games = DataProvider.INSTANCE.requestGameList(resultfor, min.getText().toString(),
-                            max.getText().toString(), game.getW()[0], game.getW()[1],
-                            game.getW()[2], null, null, null, null);
+                            max.getText().toString(), game.getW()[0], game.getW()[1], game.getW()[2], null, null, null, null);
                     if(games.isEmpty()){
                         Toast.makeText(view.getContext(), "No Results Found", Toast.LENGTH_SHORT).show();
                     }else {
