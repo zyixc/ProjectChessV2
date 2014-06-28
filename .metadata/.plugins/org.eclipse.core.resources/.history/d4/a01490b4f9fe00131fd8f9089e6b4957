@@ -1,0 +1,50 @@
+<html>
+
+<!-- Mirrored from www.treegarden.nl/chess/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jun 2014 18:44:10 GMT -->
+<head><title>test</title></head>
+<script type="text/javascript"  
+    src="pgnyui.js">  
+</script>   
+<script type="text/javascript"  
+    src="pgnviewer.js">  
+</script>  
+<link  
+ type="text/css"   
+ rel="stylesheet"   
+ href="board-min.css">  
+</link>  
+
+<script>  
+
+var moves = getUrlVars()["moves"];
+moves = moves.replace(/%20/g," ");
+
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+new PgnViewer(  
+  { boardName: "demo",  
+  //  pgnFile: '/kasparov.pgn',  
+	pgnString: moves,
+	pieceSet: 'merida',   
+    pieceSize: 46  
+  }  
+);  
+</script>  
+
+
+<body>
+
+<div id="demo-container"></div>  
+<div id="demo-moves"></div>  
+
+
+</body>
+
+<!-- Mirrored from www.treegarden.nl/chess/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jun 2014 18:44:11 GMT -->
+</html>

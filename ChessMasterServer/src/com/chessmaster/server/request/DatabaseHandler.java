@@ -95,7 +95,7 @@ public class DatabaseHandler {
                         rs.getString(4),
                         rs.getString(5),
                         player_white.getFirstname()+" "+player_white.getLastname(),
-                        player_white.getFirstname()+" "+player_black.getLastname(),
+                        player_black.getFirstname()+" "+player_black.getLastname(),
                         rs.getString(8),
                         rs.getInt(9),
                         rs.getInt(10),
